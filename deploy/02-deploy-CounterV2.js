@@ -10,12 +10,12 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     const args = []
     const counterV2Contract = await ethers.getContractFactory("CounterV2")
     log("----------------------------")
-    log("Deploying CounterV1...")
+    log("Deploying CounterV2...")
 
     const counterV2 = await upgrades.deployProxy(counterV2Contract, args)
     await counterV2.deployed()
 
-    console.log("Pizza deployed to:", counterV2.address)
+    console.log("CounterV2 deployed to:", counterV2.address)
     log("----------------------------")
 
     if (!developmentChains.includes(network.name) && process.env.ETHERSCAN_API_KEY) {

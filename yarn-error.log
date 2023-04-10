@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Users\vishw\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js cache clean
+  C:\Program Files\nodejs\node.exe C:\Users\vishw\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @openzeppelin/contracts-upgradeable
 
 PATH: 
-  C:\Python311\Scripts\;C:\Python311\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\vishw\AppData\Local\Microsoft\WindowsApps;C:\Users\vishw\AppData\Roaming\npm;C:\Users\vishw\AppData\Local\Programs\Microsoft VS Code\bin
+  C:\Python311\Scripts\;C:\Python311\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NGX;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\vishw\AppData\Local\Microsoft\WindowsApps;C:\Users\vishw\AppData\Roaming\npm;C:\Users\vishw\AppData\Local\Programs\Microsoft VS Code\bin;
 
 Yarn version: 
   1.22.19
@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: UNKNOWN: unknown error, scandir 'C:\Users\vishw\AppData\Local\Yarn\Cache\v6\npm-@babel-helper-validator-identifier-7.19.1-7eea834cf32901ffdc1a7ee555e2f9c27e249ca2-integrity\node_modules\@babel\helper-validator-identifier\lib'
+  Error: EPERM: operation not permitted, unlink 'E:\Learn_blockchain\ProxyPattern-new\node_modules\secp256k1\prebuilds\win32-x64\node.napi.node'
 
 npm manifest: 
   {

@@ -2,18 +2,16 @@
 pragma solidity ^0.8.7;
 
 import "./CounterV1.sol";
+import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
-contract Dev {
-    function selectors() external pure returns (bytes4, bytes4, bytes4) {
-        return (Proxy.admin.selector, Proxy.implementation.selector, Proxy.upgradeTo.selector);
-    }
-}
-
-contract Proxy {
+contract Proxy is Initializable {
     bytes32 private constant IMPLEMENTATION_SLOT = bytes32(uint(keccak256("eip1967.proxy.implementation")) - 1);
     bytes32 private constant ADMIN_SLOT = bytes32(uint(keccak256("eip1967.proxy.admin")) - 1);
 
-    constructor() {
+    // constructor() {
+    //     _setAdmin(msg.sender);
+    // }
+    initializer() public {
         _setAdmin(msg.sender);
     }
 
@@ -141,5 +139,11 @@ contract TestSlot {
 
     function writeSlot(address _addr) external {
         StorageSlot.getAddressSlot(slot).value = _addr;
+    }
+}
+
+contract Dev {
+    function selectors() external pure returns (bytes4, bytes4, bytes4) {
+        return (Proxy.admin.selector, Proxy.implementation.selector, Proxy.upgradeTo.selector);
     }
 }

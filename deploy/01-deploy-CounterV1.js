@@ -15,7 +15,7 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     const counterV1 = await upgrades.deployProxy(counterV1Contract, args)
     await counterV1.deployed()
 
-    console.log("Pizza deployed to:", counterV1.address)
+    console.log("CounterV1 deployed to:", counterV1.address)
     log("----------------------------")
 
     if (!developmentChains.includes(network.name) && process.env.ETHERSCAN_API_KEY) {
