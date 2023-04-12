@@ -20,10 +20,12 @@ module.exports = {
         hardhat: {
             chainId: 31337,
             blockConfirmations: 1,
+            allowUnlimitedContractSize: true,
         },
         localhost: {
             chainId: 31337,
             blockConfirmations: 1,
+            allowUnlimitedContractSize: true,
         },
         goerli: {
             url: GOERLI_RPC_URL,
@@ -39,6 +41,7 @@ module.exports = {
             blockConfirmations: 6,
             saveDeployments: true,
             chainId: 11155111,
+            allowUnlimitedContractSize: true,
         },
     },
     etherscan: {

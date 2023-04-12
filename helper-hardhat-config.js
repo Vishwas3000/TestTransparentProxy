@@ -18,5 +18,18 @@ const networkConfig = {
     },
 }
 const developmentChains = ["hardhat", "localhost"]
+const contractAddressessPath = "./Constants/contract-addresses.json"
+const counterV1Abi = "./Constants/counterV1-abi.json"
+const counterV2Abi = "./Constants/counterV2-abi.json"
+const proxyAbi = "./Constants/proxy-abi.json"
+const proxyAdminAbi = "./Constants/proxyAdmin-abi.json"
 
-module.exports = { networkConfig, developmentChains }
+module.exports = {
+    networkConfig,
+    developmentChains,
+    contractAddressessPath,
+    counterV1Abi,
+    counterV2Abi,
+    proxyAbi,
+    proxyAdminAbi,
+}

@@ -6,6 +6,8 @@ import "./Proxy.sol";
 contract ProxyAdmin {
     address public owner;
 
+    event ProxyAdminChanged(address proxy, address admin);
+
     constructor() {
         owner = msg.sender;
     }
@@ -29,9 +31,14 @@ contract ProxyAdmin {
 
     function changeProxyAdmin(address payable proxy, address admin) external onlyOwner {
         Proxy(proxy).changeAdmin(admin);
+        emit ProxyAdminChanged(proxy, admin);
     }
 
     function upgrade(address payable proxy, address implementation) external onlyOwner {
         Proxy(proxy).upgradeTo(implementation);
+    }
+
+    function changeOwner(address newOwner) external onlyOwner {
+        owner = newOwner;
     }
 }

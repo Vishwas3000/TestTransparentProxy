@@ -2,16 +2,20 @@
 pragma solidity ^0.8.7;
 
 import "./CounterV1.sol";
+
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 
 contract Proxy is Initializable {
     bytes32 private constant IMPLEMENTATION_SLOT = bytes32(uint(keccak256("eip1967.proxy.implementation")) - 1);
     bytes32 private constant ADMIN_SLOT = bytes32(uint(keccak256("eip1967.proxy.admin")) - 1);
 
+    event AdminChanged(address admin);
+
     // constructor() {
     //     _setAdmin(msg.sender);
     // }
-    initializer() public {
+
+    function initialize() public initializer {
         _setAdmin(msg.sender);
     }
 
@@ -48,6 +52,7 @@ contract Proxy is Initializable {
     // Admin interface //
     function changeAdmin(address _admin) external ifAdmin {
         _setAdmin(_admin);
+        emit AdminChanged(_admin);
     }
 
     // 0x3659cfe6
@@ -56,7 +61,7 @@ contract Proxy is Initializable {
     }
 
     // 0xf851a440
-    function admin() external ifAdmin returns (address) {
+    function admin() external returns (address) {
         return _getAdmin();
     }
 

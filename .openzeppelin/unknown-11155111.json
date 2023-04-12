@@ -1,0 +1,48 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0xe8968Bc1d502bEAb4895D51C934F5C3c5a7A7168",
+      "txHash": "0x2fc592bb4a6e7edaa81d256fc73242db350a661d7b25af61382d2c71551bb867",
+      "kind": "uups"
+    }
+  ],
+  "impls": {
+    "971438375cf3831127a65576f977733cad86a7e0a9dc965be485af0bc0ff2d74": {
+      "address": "0x9ddE5ABD95D3b47a8F71784D06540eA9F2BF0367",
+      "txHash": "0x1eb0bf3b6e455c12818bf45451ed39ca86dfbbba09195e92e7e5e9e6263b0fe3",
+      "layout": {
+        "solcVersion": "0.8.7",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}
