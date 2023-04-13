@@ -18,13 +18,13 @@ contract ProxyAdmin {
     }
 
     function getProxyAdmin(address proxy) external view returns (address) {
-        (bool ok, bytes memory res) = proxy.staticcall(abi.encodeWithSelector(Proxy.admin.selector));
+        (bool ok, bytes memory res) = proxy.staticcall(abi.encodeWithSignature("admin()"));
         require(ok, "call failed");
         return abi.decode(res, (address));
     }
 
     function getProxyImplementation(address proxy) external view returns (address) {
-        (bool ok, bytes memory res) = proxy.staticcall(abi.encodeWithSelector(Proxy.implementation.selector));
+        (bool ok, bytes memory res) = proxy.staticcall(abi.encodeWithSignature("implementation()"));
         require(ok, "call failed");
         return abi.decode(res, (address));
     }

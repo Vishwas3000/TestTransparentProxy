@@ -5,12 +5,58 @@
       "address": "0xe8968Bc1d502bEAb4895D51C934F5C3c5a7A7168",
       "txHash": "0x2fc592bb4a6e7edaa81d256fc73242db350a661d7b25af61382d2c71551bb867",
       "kind": "uups"
+    },
+    {
+      "address": "0x3B24befF8D6C5556D0CE863e786C49F49896bFe5",
+      "txHash": "0xbe11d194de731ddea03467f733777fde41b507110cc103e5fd54809c103dba36",
+      "kind": "uups"
+    },
+    {
+      "address": "0xD79B35f8944fa26Aff88f38Ae5791DEfE5079826",
+      "txHash": "0x5bd6c62f0f813fc5802670f120803814f1016a2de8df34df4fbfb37bfb007436",
+      "kind": "uups"
     }
   ],
   "impls": {
     "971438375cf3831127a65576f977733cad86a7e0a9dc965be485af0bc0ff2d74": {
       "address": "0x9ddE5ABD95D3b47a8F71784D06540eA9F2BF0367",
       "txHash": "0x1eb0bf3b6e455c12818bf45451ed39ca86dfbbba09195e92e7e5e9e6263b0fe3",
+      "layout": {
+        "solcVersion": "0.8.7",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "99c635fc65a8a43128cdd0c7318bd461796114b66bff378008aae02c4d6bc2d2": {
+      "address": "0xA1033F5597D533057e1bA8d39662C868E2553A2E",
+      "txHash": "0x5da6797f0305081ef37d92cc713d96d02d31b492200a2ee8e9d0624fa26f84bb",
       "layout": {
         "solcVersion": "0.8.7",
         "storage": [

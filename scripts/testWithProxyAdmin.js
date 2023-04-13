@@ -7,12 +7,12 @@ async function ChangeOwner() {
     const chainId = network.config.chainId.toString()
     const proxyAdmin = await ethers.getContractAt(proxyAdminAbi, contractAddresses[chainId]["ProxyAdmin"])
 
-    const txReceipt2 = await proxyAdmin.changeOwner(contractAddresses[chainId]["ProxyAdmin"])
-    const txResponse2 = await txReceipt2.wait(1)
+    // const txReceipt2 = await proxyAdmin.changeOwner(contractAddresses[chainId]["ProxyAdmin"])
+    // const txResponse2 = await txReceipt2.wait(1)
 
-    console.log("Proxy admin owner changed to:", txResponse2)
+    // console.log("Proxy admin owner changed to:", txResponse2)
 
-    // const txReceipt3 = await proxyAdmin.getProxyAdmin(contractAddresses[chainId]["Proxy"].toString())
+    // const txReceipt3 = await proxyAdmin.getProxyAdmin(contractAddresses[chainId]["Proxy"])
     // const txResponse3 = await txReceipt3.wait(1)
     // console.log("Proxy admin :", txReceipt3)
 }

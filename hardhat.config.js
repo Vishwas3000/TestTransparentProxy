@@ -16,16 +16,21 @@ module.exports = {
     solidity: {
         compilers: [{ version: "0.8.7" }],
     },
+    defaultNetwork: "localhost",
     networks: {
         hardhat: {
             chainId: 31337,
             blockConfirmations: 1,
             allowUnlimitedContractSize: true,
+            gas: 2100000,
+            gasPrice: 8000000000,
         },
         localhost: {
             chainId: 31337,
             blockConfirmations: 1,
             allowUnlimitedContractSize: true,
+            gas: 2100000,
+            gasPrice: 8000000000,
         },
         goerli: {
             url: GOERLI_RPC_URL,

@@ -4,16 +4,14 @@ pragma solidity ^0.8.7;
 import "./CounterV1.sol";
 
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import "hardhat/console.sol";
 
 contract Proxy is Initializable {
     bytes32 private constant IMPLEMENTATION_SLOT = bytes32(uint(keccak256("eip1967.proxy.implementation")) - 1);
     bytes32 private constant ADMIN_SLOT = bytes32(uint(keccak256("eip1967.proxy.admin")) - 1);
 
     event AdminChanged(address admin);
-
-    // constructor() {
-    //     _setAdmin(msg.sender);
-    // }
+    event UpgradedImplementation(address implementation);
 
     function initialize() public initializer {
         _setAdmin(msg.sender);
@@ -58,15 +56,18 @@ contract Proxy is Initializable {
     // 0x3659cfe6
     function upgradeTo(address _implementation) external ifAdmin {
         _setImplementation(_implementation);
+        emit UpgradedImplementation(_implementation);
     }
 
     // 0xf851a440
-    function admin() external returns (address) {
+    function admin() external view returns (address) {
+        console.log("admin fun is called");
         return _getAdmin();
     }
 
     // 0x5c60da1b
-    function implementation() external ifAdmin returns (address) {
+    function implementation() external view returns (address) {
+        console.log("implementation fun is called");
         return _getImplementation();
     }
 
